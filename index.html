@@ -5,58 +5,296 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Evento</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="./index.css" rel="stylesheet" />
+        <link href="./styles.css" rel="stylesheet" />
     </head>
     <body>
 
         <!--Barra de cima-->
-        <div class = "main-content">
-            <div class="header">
-                <h1>Eventos</h1>
-                <form method="post">
-                    <select>
-                        <option>SELECIONE</option>
-                        <option>Hoje</option>
-                        <option>Amanhã</option>
-                        <option>Semana subsequente</option>
+        <div class="header">
+            <h1>Agenda de Eventos</h1>
+            <form method="post" class="p-4 border rounded shadow-sm bg-light my-4">
+                <div class="row g-3 mb-3">
+                  <div class="col-md-4">
+                    <label for="selectOption" class="form-label">Selecione uma opção:</label>
+                    <select id="selectOption" class="form-select">
+                      <option selected>SELECIONE</option>
+                      <option>Hoje</option>
+                      <option>Amanhã</option>
+                      <option>Semana subsequente</option>
                     </select>
-                    <input type= "date" />
-                    <input type= "date" />                    
-                    <button type = "submit">Pesquisar</button>
-                    <button type = "reset">Limpar</button>
-                </form>
-        <!--Cards -->        
-                <div class="cards">
-                    <div class="card">
-                        <h2>Reunião de alinhamento</h2>
-
-                    </div>
-                    <div class="card">
-                        <h2>Confraternização de Boas-vindas</h2>
-                    </div>
-                    <div class="card">
-                        <h2>Análise de desempenho</h2>
-                    </div>
-                    <div class="card">
-                        <h2>Planejamento de Marketing</h2>
-                    </div>
-                    <div class="card">
-                        <h2>Dia das mães</h2>
-                    </div>
-                    <div class="card">
-                        <h2>Finalização do Projeto</h2>
-                    </div>
-                    <div class="card">
-                        <h2>Acompanhamento de KPIs</h2>
-                    </div>
-                    <div class="card">
-                        <h2>Revisão de orçamento</h2>
-                    </div>
-                    <div class="card">
-                        <h2>Dia da família</h2>
-                    </div>
+                  </div>
+              
+                  <div class="col-md-4">
+                    <label for="startDate" class="form-label">Data de Início:</label>
+                    <input type="date" id="startDate" class="form-control">
+                  </div>
+              
+                  <div class="col-md-4">
+                    <label for="endDate" class="form-label">Data de Fim:</label>
+                    <input type="date" id="endDate" class="form-control">
+                  </div>
                 </div>
+              
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary m-2">Pesquisar</button>
+                  <button type="reset" class="btn btn-secondary m-2">Limpar</button>
+                </div>
+            </form>
+         </div> 
+        <div class = "container-fluid">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>4</span> JAN</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Reunião de Alinhamento</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
             </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>8</span> JAN</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Confraternização de Boas-Vindas</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>18</span> FEV</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Análise de Desempenho</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>26</span> FEV</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Planejamento de Marketing</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>11</span> MAR</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Dia das Mães</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>16</span> MAR</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Finalização de Projeto</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>2</span> ABR</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Acompanhamento de KPI's</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>20</span> ABR</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Revisão de Orçamento</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>11</span> MAI</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Feedback Trimestral</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>16</span> MAI</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Painel de Desenvolvimento</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>26</span> MAI</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Palestra de Estratégia de Mercado</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>3</span> JUN</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Análise de Desempenho Trimestral</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+            <div class="col-md-4 mb-4">
+              <!--Cards -->      
+              <a class="link-card" href="#">
+                <div class="card mb-3 botao" >
+                    <div class="row">
+                        <div class="col-md-5">                            
+                          <div class="card-text">
+                            <p><span>25</span> JUN</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h4 class="card-title text-center">Revisão de Estratégia</h4>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </a>  
+            </div>
+           
+
+          </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     </body>
 </html>

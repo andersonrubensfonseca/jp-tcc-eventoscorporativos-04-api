@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-text p{
+  text-align: center;
+  font-size: 32px;
+  padding: 1px;
+}
+
+.card-text p span{
+  display: block;
+}
+
+.botao{
+  cursor:pointer;
+}
+
+.link-card{
+  text-decoration: none;
+}
