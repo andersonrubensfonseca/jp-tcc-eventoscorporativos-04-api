@@ -6,12 +6,15 @@
         <title>Evento</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link href="./styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     </head>
     <body>
 
         <!--Barra de cima-->
         <div class="header">
-            <h1>Agenda de Eventos</h1>
+            <h1 style ="text-align: center;">Agenda de Eventos</h1>
             <form method="post" class="p-4 border rounded shadow-sm bg-light my-4">
                 <div class="row g-3 mb-3">
                   <div class="col-md-4">
@@ -45,255 +48,453 @@
           <div class="row">
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>4</span> JAN</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                      </div>
+                      <div class="col-md-7 d-flex">
+                        <div class="d-flex" style="padding-top: 20px ;height: 100px;">
+                          <div class="vr"></div>
+                        </div>
+                        <div class="card-body">
                             <h4 class="card-title text-center">Reunião de Alinhamento</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div> 
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                      Definiremos de forma clara os objetivos de curto, médio e longo prazo. É essencial que todos entendam a missão principal do projeto e como seu trabalho contribui para a empresa.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal2">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>8</span> JAN</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                    </div>
+                      <div class="col-md-7">
+                        <div class="card-body">
                             <h4 class="card-title text-center">Confraternização de Boas-Vindas</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal2" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre a Confraternização de Boas-Vindas
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal3">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>18</span> FEV</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
                             <h4 class="card-title text-center">Análise de Desempenho</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal3" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre Reunião de Análise de Desempenho!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+          </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>26</span> FEV</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
                             <h4 class="card-title text-center">Planejamento de Marketing</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal4" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre Planejamento de Marketing!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal5">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>11</span> MAR</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
                             <h4 class="card-title text-center">Dia das Mães</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal5" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre o Dia das Mães!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal6">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>16</span> MAR</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
                             <h4 class="card-title text-center">Finalização de Projeto</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal6" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre a Finalização de Projeto!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal7">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>2</span> ABR</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
                             <h4 class="card-title text-center">Acompanhamento de KPI's</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal7" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre Acompanhamento de KPI's!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal8">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>20</span> ABR</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
                             <h4 class="card-title text-center">Revisão de Orçamento</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal8" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre a Revisão de Orçamento!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal9">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>11</span> MAI</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
                             <h4 class="card-title text-center">Feedback Trimestral</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal9" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre O Feedback Trismetral!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal10">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>16</span> MAI</p>
-                          </div>
-                        </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
-                            <h4 class="card-title text-center">Painel de Desenvolvimento</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Painel de Desenvolviento</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal10" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre a Painel de Desenvolovimento!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal11">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>26</span> MAI</p>
-                          </div>
                         </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
                             <h4 class="card-title text-center">Palestra de Estratégia de Mercado</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal11" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre a Palestra de Estratégia de Mercado!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal12">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>3</span> JUN</p>
-                          </div>
-                        </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
-                            <h4 class="card-title text-center">Análise de Desempenho Trimestral</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Análise de Desempenho Trimestral</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal12" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre a Análise de Desempenho Trimestral!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="col-md-4 mb-4">
               <!--Cards -->      
-              <a class="link-card" href="#">
-                <div class="card mb-3 botao" >
-                    <div class="row">
-                        <div class="col-md-5">                            
-                          <div class="card-text">
+              <div class="card mb-3 botao" data-toggle="modal" data-target="#infoModal13">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-text">
                             <p><span>25</span> JUN</p>
-                          </div>
-                        </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
-                            <h4 class="card-title text-center">Revisão de Estratégia</h4>
-                          </div>
                         </div>
                     </div>
-                  </div>
-              </a>  
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Revisão de Estratégia</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
-           
-
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal13" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Informações Adicionais</h5>
+                    </div>
+                    <div class="modal-body">
+                        Aqui estão as informações adicionais sobre a Revisão de Estratégia!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
           </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     </body>
