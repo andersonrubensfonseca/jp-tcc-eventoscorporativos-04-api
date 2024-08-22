@@ -5,6 +5,17 @@ box-sizing: border-box;
 font-family:"Manrope"
 }
 
+.card {
+width: 359px; /* Largura fixa */
+height: 110px; /* Altura fixa */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box;
+}
+
 .card-text p{
 text-align: center;
 font-size: 32px;
@@ -21,12 +32,29 @@ flex-direction: column;
 position: absolute;
 top: 50%;
 left: -5px; /* Metade da largura da bola */
-transform: translateY(18%);
+transform: translateY(-50%);
 margin-left: 50px; /* Margem adicional para afastar um pouco da borda */
 }
 
 .card-text p span{
 display: block;
+}
+
+.day {
+font-size: 20px;
+font-weight: bold;
+}
+
+.month {
+font-size: 14px;    
+}
+
+.vr {
+width: 1px; /* Largura da barra */
+height: 70px; /* Altura da barra */
+position: absolute; /* Permite posicionar a barra dentro do contêiner pai */
+top: 20px; /* Ajusta a posição vertical a partir do topo do contêiner pai */
+left: 140px; /* Ajusta a posição horizontal a partir da borda esquerda do contêiner pai */
 }
 
 .botao{
