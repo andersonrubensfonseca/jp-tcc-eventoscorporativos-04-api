@@ -19,7 +19,21 @@ function carregaEventos(eventos, frase = "") {
             { day: 8, month: 'JAN', title: 'Conf. de Boas-Vindas', text: 'Aqui estão as informações adicionais sobre a Confraternização de Boas-Vindas' },
             { day: 18, month: 'FEV', title: 'Análise de Desempenho', text: 'Aqui estão as informações adicionais sobre Reunião de Análise de Desempenho!' },
             { day: 26, month: 'FEV', title: 'Planejamento de Marketing', text: 'Aqui estão as informações adicionais sobre Planejamento de Marketing!' },
+            { day: 12, month: 'MAR', title: 'Dia das Mães', text: 'Aqui estão as informações adicionais sobre O Dia das Mães!' },
+            { day: 28, month: 'MAR', title: 'Finalização do Projeto', text: 'Aqui estão as informações adicionais sobre a Finalização de Projeto!' },
+            { day: 12, month: 'ABR', title: 'Acompanhamento de KPI', text: 'Aqui estão as informações adicionais sobre Acompanhamento de KPI!' },
+            { day: 20, month: 'ABR', title: 'Revisão de Orçamento', text: 'Aqui estão as informações adicionais sobre Revisão de Orçamento!' },
+            { day: 15, month: 'MAI', title: 'Dia da Família', text: 'Aqui estão as informações adicionais sobre Dia da Família!' },
+            { day: 4, month: 'JUN', title: 'Palestra', text: 'Aqui estão as informações adicionais sobre Palestra!' },
+            { day: 15, month: 'JUL', title: 'Análise de Quadro', text: 'Aqui estão as informações adicionais sobre Análise de Quadro!' }, 
+            { day: 22, month: 'AGO', title: 'Alinhamento Trimestral', text: 'Aqui estão as informações adicionais sobre Alinhamento Trimestral!' },
+            { day: 9, month: 'SET', title: 'Revisão de Orçamento', text: 'Aqui estão as informações adicionais sobre Revisão de Orçamento!' },
+            { day: 17, month: 'OUT', title: 'Atualização de Software', text: 'Aqui estão as informações adicionais sobre Atualização de Software!' },
+            { day: 22, month: 'OUT', title: 'Finalização de Projeto', text: 'Aqui estão as informações adicionais sobre Finalização de Projeto!' },
+            { day: 13, month: 'NOV', title: 'Novo Planejamento de equipe', text: 'Aqui estão as informações adicionais sobre Novo Planejamneto de Equipe!' },
+            { day: 6, month: 'DEZ', title: 'Reunião de Alinhamento', text: 'Aqui estão as informações adicionais sobre Reunião de Alinhamento!' },
         ]
+
     }
     let base = document.getElementById('base');
     base.innerHTML = "";
@@ -74,12 +88,79 @@ function carregaEventos(eventos, frase = "") {
 
 carregaEventos(eventos = [])
 
+function getNextWeekDays() {
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let today = new Date();
+    let days = [];
+    
+    // Calcula o número de dias até o próximo domingo
+    let daysUntilSunday = 7 - today.getDay();
+    
+    // Itera sobre os próximos 7 dias
+    for (let i = 1; i <= 7; i++) {
+        let nextDay = new Date();
+        nextDay.setDate(today.getDate() + daysUntilSunday + i);
+        let day = {
+            day: nextDay.getDate(),
+            month: nextDay.toLocaleString('default', { month: 'short' }).toUpperCase().replace(/\./g, ''), // mês abreviado (ex: Jan, Feb)
+            weekDay: daysOfWeek[nextDay.getDay()] // Nome do dia da semana
+        };
+        days.push(day);
+    }
+
+    return days;
+}
+
+function getDatesBetween(startDate, endDate) {
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let datesArray = [];
+
+    // Converte as datas de entrada para objetos Date
+    let currentDate = new Date(startDate);
+    endDate = new Date(endDate);
+    let finalDate = new Date(endDate);
+    finalDate.setDate(finalDate.getDate() + 1);
+
+    // Loop até que a data atual seja maior que a data final
+    while (currentDate <= finalDate) {
+        // Cria um objeto de data no formato desejado
+        let dateObj = {
+            day: currentDate.getDate(),
+            month: currentDate.toLocaleString('default', { month: 'short' }).toUpperCase().replace(/\./g, ''), // mês abreviado (ex: Jan, Feb)
+            weekDay: daysOfWeek[currentDate.getDay()] // Nome do dia da semana
+        };
+
+        // Adiciona o objeto ao array de datas
+        datesArray.push(dateObj);
+
+        // Avança para o próximo dia
+        currentDate.setDate(currentDate.getDate() + 1);
+    }
+
+    return datesArray;
+}
+
 function filtro(event) {
     let eventos = [
         { day: 4, month: 'JAN', title: 'Reunião de Alinhamento', text: 'Definiremos de forma clara os objetivos de curto, médio e longo prazo. É essencial que todos entendam a missão principal do projeto e como seu trabalho contribui para a empresa.' },
         { day: 8, month: 'JAN', title: 'Conf. de Boas-Vindas', text: 'Aqui estão as informações adicionais sobre a Confraternização de Boas-Vindas' },
         { day: 18, month: 'FEV', title: 'Análise de Desempenho', text: 'Aqui estão as informações adicionais sobre Reunião de Análise de Desempenho!' },
         { day: 26, month: 'FEV', title: 'Planejamento de Marketing', text: 'Aqui estão as informações adicionais sobre Planejamento de Marketing!' },
+        { day: 3, month: 'MAR', title: 'Planejamento de Marketing', text: 'Aqui estão as informações adicionais sobre Planejamento de Marketing!' },
+        { day: 12, month: 'MAR', title: 'Dia das Mães', text: 'Aqui estão as informações adicionais sobre O Dia das Mães!' },
+        { day: 28, month: 'MAR', title: 'Finalização do Projeto', text: 'Aqui estão as informações adicionais sobre a Finalização de Projeto!' },
+        { day: 12, month: 'ABR', title: 'Acompanhamento de KPI', text: 'Aqui estão as informações adicionais sobre Acompanhamento de KPI!' },
+        { day: 20, month: 'ABR', title: 'Revisão de Orçamento', text: 'Aqui estão as informações adicionais sobre Revisão de Orçamento!' },
+        { day: 15, month: 'MAI', title: 'Dia da Família', text: 'Aqui estão as informações adicionais sobre Dia da Família!' },
+        { day: 4, month: 'JUN', title: 'Palestra', text: 'Aqui estão as informações adicionais sobre Palestra!' },
+        { day: 15, month: 'JUL', title: 'Análise de Quadro', text: 'Aqui estão as informações adicionais sobre Análise de Quadro!' }, 
+        { day: 22, month: 'AGO', title: 'Alinhamento Trimestral', text: 'Aqui estão as informações adicionais sobre Alinhamento Trimestral!' },
+        { day: 9, month: 'SET', title: 'Revisão de Orçamento', text: 'Aqui estão as informações adicionais sobre Revisão de Orçamento!' },
+        { day: 17, month: 'OUT', title: 'Atualização de Software', text: 'Aqui estão as informações adicionais sobre Atualização de Software!' },
+        { day: 22, month: 'OUT', title: 'Finalização de Projeto', text: 'Aqui estão as informações adicionais sobre Finalização de Projeto!' },
+        { day: 13, month: 'NOV', title: 'Novo Planejamento de equipe', text: 'Aqui estão as informações adicionais sobre Novo Planejamneto de Equipe!' },
+        { day: 6, month: 'DEZ', title: 'Reunião de Alinhamento', text: 'Aqui estão as informações adicionais sobre Reunião de Alinhamento!' },
+    
     ]
     let mesString = ['JAN', 'FEV', 'MAR', 'ABR', "MAI", 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ']
     event.preventDefault();
@@ -100,7 +181,7 @@ function filtro(event) {
     if (Object.keys(dataFilter).length === 0) {
         carregaEventos(eventos = [])
     } else {
-        if (data.selectOption) {
+        if (data.selectOption!=='') {
             let dataPesquisa = { dia: 1, mes: 0 }
             switch (data.selectOption) {
                 case 'Hoje': {
@@ -119,10 +200,6 @@ function filtro(event) {
                     dataPesquisa.mes = mes;
                 }
                     break;
-                case 'Semana subsequente':
-
-                    break;
-
                 default:
                     break;
             }
@@ -130,23 +207,38 @@ function filtro(event) {
             if (data.selectOption !== "Semana subsequente") {
                 eventosFilter = eventos.filter(ev => ev.day === dataPesquisa.dia).filter(ev => ev.month === dataPesquisa.mes);
             } else {
-                let hoje = new Date();
-                let diaSemana = hoje.getDay();
-                const proxSemana = (8 - diaSemana) % 7;
-                const proxSegunda = new Date;
-                proxSegunda.setDate(hoje.getDate() + proxSemana);
-                console.log(proxSemana);
-
-                eventosFilter = Array.from({ length: 5 }, (_, i) => {
-                    const hoje = new Date;
-                    hoje.setDate(proxSegunda.getDate() + i);
-                    return hoje;
-                });
-
-
-                carregaEventos(eventosFilter, "Eventos não encontrados.")
+                const dias  = getNextWeekDays()
+                let eventosSUM = []
+                for (let index = 0; index < 5; index++) {
+                    const dia = dias[index];
+                    eventosSUM = eventos.filter(ev => ev.day === dia.day).filter(ev => ev.month === dia.month);
+                    eventosSUM.map(es=>{
+                        eventosFilter.push(es)
+                    })
+                }                
+            }
+            if(eventosFilter.length===0){
+                carregaEventos(eventosFilter, "Eventos não encontrados.");
+            }else{
+                carregaEventos(eventosFilter)
             }
 
+        }else{
+            const dias = getDatesBetween(dataFilter.startDate, dataFilter.endDate);
+            let eventosFilter = [];
+            let eventosSUM = []
+            for (let index = 0; index < dias.length; index++) {
+                const dia = dias[index];
+                eventosSUM = eventos.filter(ev => ev.day === dia.day).filter(ev => ev.month === dia.month);
+                eventosSUM.map(es=>{
+                    eventosFilter.push(es)
+                })
+            }  
+            if(eventosFilter.length===0){
+                carregaEventos(eventosFilter, "Eventos não encontrados.");
+            }else{
+                carregaEventos(eventosFilter)
+            }    
         }
         return false;
     }

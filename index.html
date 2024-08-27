@@ -18,15 +18,18 @@
     <!--Barra de cima-->
     <div class="header">
         <h1 style="text-align: center;">Agenda de Eventos</h1>
+        <a href="eventoform.html" class="button-link">
+            <button class="submit">Cadastrar Novo Evento</button>
+        </a>
         <form id="filtrar" method="post" onreset="carregaEventos([])" onsubmit="return filtro(event)" class="p-4 border rounded shadow-sm bg-light my-4">
             <div class="row g-3 mb-3">
                 <div class="col-md-4">
                     <label for="selectOption" class="form-label">Selecione uma opção:</label>
                     <select id="selectOption" name="selectOption" class="form-select">
-                        <option selected>SELECIONE</option>
-                        <option>Hoje</option>
-                        <option>Amanhã</option>
-                        <option>Semana subsequente</option>
+                        <option value="">SELECIONE</option>
+                        <option value="Hoje">Hoje</option>
+                        <option value="Amanhã">Amanhã</option>
+                        <option value="Semana subsequente">Semana subsequente</option>
                     </select>
                 </div>
 
