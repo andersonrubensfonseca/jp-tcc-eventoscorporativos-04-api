@@ -18,10 +18,8 @@
     <!--Barra de cima-->
     <div class="header">
         <h1 style="text-align: center;">Agenda de Eventos</h1>
-        <a href="eventoform.html" class="button-link">
-            <button class="submit">Cadastrar Novo Evento</button>
-        </a>
-        <form id="filtrar" method="post" onreset="carregaEventos([])" onsubmit="return filtro(event)" class="p-4 border rounded shadow-sm bg-light my-4">
+
+        <form id="filtrar" method="post" onreset="carregaEventos([])" onsubmit="return filtro(event)" class="p-4 border rounded shadow-sm bg-light mt-4">
             <div class="row g-3 mb-3">
                 <div class="col-md-4">
                     <label for="selectOption" class="form-label">Selecione uma opção:</label>
@@ -49,6 +47,11 @@
                 <button type="reset" class="btn btn-secondary m-2">Limpar</button>
             </div>
         </form>
+        <div class="my-4 px-4">
+            <a href="cadastroform.html" class="btn btn-primary">
+                Cadastrar Novo Evento
+            </a>
+        </div>
     </div>
     <div class="container-fluid">
         <div id="base" class="row">

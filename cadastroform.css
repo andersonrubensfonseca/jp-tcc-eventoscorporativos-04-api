@@ -9,23 +9,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#cadastro {
+#event-form {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 100%;
-
-}
-
-.input-container {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
 }
 
@@ -33,6 +22,14 @@ body {
     text-align: center;
     color: #333333;
     margin-bottom: 20px; /* Espaçamento adicional abaixo do título */
+}
+
+.input-container {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff; /* Branco mais puro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 label {
@@ -43,7 +40,9 @@ label {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="date"],
+input[type="time"],
+textarea {
     width: calc(100% - 22px); /* Ajusta a largura para compensar o padding */
     padding: 10px;
     border: 1px solid #ccc;
@@ -52,6 +51,9 @@ input[type="password"] {
     margin-bottom: 15px; /* Espaçamento entre os campos */
 }
 
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
 
 .card-footer {
     text-align: center;
@@ -71,14 +73,9 @@ input[type="password"] {
     background-color: #0056b3;
 }
 
-.body {
-background-image: url("./fundoazul.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-}
-
-.meulink {
-    text-decoration: none;
-}
-
+body {
+    background-image: url("./fundoazul.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }

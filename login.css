@@ -60,3 +60,14 @@ input[type="password"] {
 .submit:hover {
     background-color: #0056b3;
 }
+
+body {
+background-image: url("./fundoazul.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.meulink {
+    text-decoration: none;
+}
